@@ -4,16 +4,15 @@ services:
   app:
     build:
       context: ./snadm
-      dockerfile: Dockerfile.dev
+      dockerfile: ./Dockerfile.dev
     depends_on:
       - database
       - redis
     ports: 
       - "3000:3000"
     volumes:
-      - .:/app
+      - ./snadm:/app
       - gem_cache:/usr/local/bundle/gems
-      - node_modules:/app/node_modules
     env_file: ./snadm/env/.app
     environment:
       RAILS_ENV: development
@@ -31,30 +30,14 @@ services:
       #      - database
   redis:
     image: redis:5.0.7
-      #  sidekiq:
-      #    build:
-      #      context: .
-      #      dockerfile: Dockerfile
-      #    depends_on:
-      #      - app      
-      #      - database
-      #      - redis
-      #    volumes:
-      #      - .:/app
-      #      - gem_cache:/usr/local/bundle/gems
-      #      - node_modules:/app/node_modules
-      #    env_file: .env
-      #    environment:
-      #      RAILS_ENV: development
-      #    entrypoint: ./entrypoints/sidekiq-entrypoint.sh
-  swagger_ui:
-    image: swaggerapi/swagger-ui
+  swagger_editor:
+    image: swaggerapi/swagger-editor
     environment:
-      SWAGGER_JSON: /swagger.yml
+      SWAGGER_FILE: /swagger.yml
     volumes:
       - ./swagger/api-documentation.yml:/swagger.yml
     ports:
-      - "7979:8080"
+      - "7777:8080"
 volumes:
   gem_cache:
   db_data:
