@@ -14,12 +14,9 @@ services:
       - gem_cache:/usr/local/bundle/gems
     env_file: ./snadm/env/.app
     command: "bundle exec rails s -b 0.0.0.0"
-    environment:
-      RAILS_ENV: development
   database:
     image: postgres:12.1
     volumes:
-      - ./:/app/
       - db_data:/var/lib/postgresql/data
     env_file: ./snadm/env/.postgres
       #  pgcli:
