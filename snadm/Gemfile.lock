@@ -212,17 +212,17 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1)
   byebug (~> 11.1)
-  factory_bot_rails
+  factory_bot_rails (~> 6.1)
   jwt (~> 2.2)
   listen (~> 3.2)
-  lograge
+  lograge (~> 0.11.2)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors (~> 1.1)
   rails (~> 6.1.0.rc1)
   rspec-rails (~> 4.0)
-  rubocop-rails
-  ruby-pg-extras
+  rubocop-rails (~> 2.8)
+  ruby-pg-extras (~> 1.2)
   strong_versions (~> 0.4.5)
 
 RUBY VERSION
