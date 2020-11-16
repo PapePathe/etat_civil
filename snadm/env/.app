@@ -1,4 +1,4 @@
-DATABASE_NAME=taag_at_core_development
+DATABASE_NAME=etat_civil_development
 DATABASE_USER=postgres
 DATABASE_PASSWORD=postgres
 DATABASE_HOST=database
