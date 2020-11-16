@@ -24,3 +24,4 @@
 /snadm/config/master.key
 node_modules/
 tags
+snadm/coverage
