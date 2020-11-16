@@ -1,0 +1,9 @@
+DATABASE_NAME=taag_at_core_development
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_HOST=database
+
+RAILS_PORT=3000
+RAILS_ENV=development
+
+REDIS_HOST=redis
