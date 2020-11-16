@@ -14,15 +14,21 @@ gem 'bcrypt', '~> 3.1'
 gem 'rack-cors', '~> 1.1'
 # Json web token
 gem 'jwt', '~> 2.2'
+# https://github.com/roidrage/lograge
+gem "lograge"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 11.1', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0'
+  gem 'factory_bot_rails'
 end
 
 group :development do
   gem 'listen', '~> 3.2'
   # Ensure dependencies have strong versions
   gem 'strong_versions', '~> 0.4.5'
+  gem 'rubocop-rails'
+  # https://github.com/pawurb/ruby-pg-extras
+  gem "ruby-pg-extras"
 end
