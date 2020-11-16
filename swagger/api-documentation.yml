@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: 0.0.1
-  title: Api Etat Civil
+  title: Api actes Etat Civil
 paths:
   '/api/v1/sessions':
     post:
@@ -12,10 +12,25 @@ paths:
       responses:
         201:
           description: Session crée avec succès
+    get:
+      summary: "Recherche un acte d'état civil"
+      tags:
+        - Actes d'état civil
+      responses:
+        200:
+          description: Résultats de la recherche
+        401:
+          description: Non autorisé
+        422:
+          description: Paramètres invalides
+        500:
+          description: Erreur      
 
-  '/api/v1/actes-etat-civil':
+  '/api/v1/actes':
     post:
       summary: "Nouvel acte d'état civil"
+      tags:
+        - Actes d'état civil
       responses:
         201:
           description: Acte crée avec succès
@@ -26,8 +41,38 @@ paths:
         500:
           description: Erreur 
           
-    put:
-      summary: "Mise à jour d'un acte d'état civil"
+  '/api/v1/actes/{id}':          
+    get:
+      summary: "Affichage d'un acte de naissance"
+      tags:
+        - Actes d'état civil
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200: 
+          description: ''
+        401:
+          description: Non autorisé
+        422:
+          description: Paramètres invalides
+        500:
+          description: Erreur  
+          
+  '/api/v1/actes/{id}/delivrer':          
+    get:
+      summary: "Impression d'un acte de naissance"
+      tags:
+        - Actes d'état civil
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
       responses:
         200: 
           description: ''
@@ -37,3 +82,4 @@ paths:
           description: Paramètres invalides
         500:
           description: Erreur       
+
