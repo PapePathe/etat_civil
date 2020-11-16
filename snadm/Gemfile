@@ -28,6 +28,8 @@ group :development do
   # https://github.com/rubysec/bundler-audit
   gem 'bundler-audit'
   gem 'guard-rspec'
+  # https://github.com/teeparham/gemdiff
+  gem 'gemdiff'
   gem 'annotate'
   gem 'listen', '~> 3.2'
   # Ensure dependencies have strong versions
