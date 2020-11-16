@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: Api Etat Civil
+paths:
+  '/api/v1/sessions':
+    post:
+      summary: 'Nouvelle session'
+      tags:
+        - Agents
+      description: 'Crée une nouvelle session pour un agent'
+      responses:
+        201:
+          description: Session crée avec succès
+
+  '/api/v1/actes-etat-civil':
+    post:
+      summary: "Nouvel acte d'état civil"
+      responses:
+        201:
+          description: Acte crée avec succès
+        401:
+          description: Non autorisé
+        422:
+          description: Paramètres invalides
+        500:
+          description: Erreur 
+          
+    put:
+      summary: "Mise à jour d'un acte d'état civil"
+      responses:
+        200: 
+          description: ''
+        401:
+          description: Non autorisé
+        422:
+          description: Paramètres invalides
+        500:
+          description: Erreur       
