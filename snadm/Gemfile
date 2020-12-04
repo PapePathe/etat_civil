@@ -2,23 +2,15 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.0.rc1'
-# Use postgresql as the database for Active Record
+gem 'rails', '~> 6.1.0.rc2'
 gem 'pg', '~> 1.1'
-# Use Puma as the app server
 gem 'puma', '~> 5.0'
-# Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1'
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors', '~> 1.1'
-# Json web token
 gem 'jwt', '~> 2.2'
-# https://github.com/roidrage/lograge
 gem 'lograge', '~> 0.11.2'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 11.1', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0'
   gem 'factory_bot_rails', '~> 6.1'
@@ -32,7 +24,6 @@ group :development do
   gem 'gemdiff'
   gem 'annotate'
   gem 'listen', '~> 3.2'
-  # Ensure dependencies have strong versions
   gem 'strong_versions', '~> 0.4.5'
   gem 'rubocop-rails', '~> 2.8', require: false
   # https://github.com/pawurb/ruby-pg-extras
