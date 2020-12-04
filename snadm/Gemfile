@@ -9,6 +9,8 @@ gem 'bcrypt', '~> 3.1'
 gem 'rack-cors', '~> 1.1'
 gem 'jwt', '~> 2.2'
 gem 'lograge', '~> 0.11.2'
+# => https://github.com/nebulab/simple_command
+gem 'simple_command'
 
 group :development, :test do
   gem 'byebug', '~> 11.1', platforms: [:mri, :mingw, :x64_mingw]
@@ -17,17 +19,19 @@ group :development, :test do
 end
 
 group :development do
-  # https://github.com/rubysec/bundler-audit
+  # => https://github.com/rubysec/bundler-audit
   gem 'bundler-audit'
   gem 'guard-rspec'
-  # https://github.com/teeparham/gemdiff
+  # => https://github.com/teeparham/gemdiff
   gem 'gemdiff'
   gem 'annotate'
   gem 'listen', '~> 3.2'
   gem 'strong_versions', '~> 0.4.5'
   gem 'rubocop-rails', '~> 2.8', require: false
-  # https://github.com/pawurb/ruby-pg-extras
+  # => https://github.com/pawurb/ruby-pg-extras
   gem 'ruby-pg-extras', '~> 1.2'
+  # => https://github.com/bobf/strong_versions
+  gem 'strong_versions', '~> 0.4.5'
 end
 
 group :test do
