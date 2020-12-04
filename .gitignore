@@ -25,3 +25,4 @@
 node_modules/
 tags
 snadm/coverage
+snadm/spec/examples.txt
