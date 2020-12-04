@@ -7,8 +7,8 @@ services:
     depends_on:
       - database
       - redis
-    ports: 
-      - "3000:3000"
+    ports:
+      - "6000:3000"
     volumes:
       - ./snadm:/app
       - gem_cache:/usr/local/bundle/gems
