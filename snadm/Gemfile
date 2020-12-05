@@ -31,6 +31,9 @@ group :development do
   gem 'ruby-pg-extras', '~> 1.2'
   # => https://github.com/bobf/strong_versions
   gem 'strong_versions', '~> 0.4.5'
+  # => https://github.com/awesome-print/awesome_print
+  gem 'awesome_print'
+  gem 'ffaker'
 end
 
 group :test do
