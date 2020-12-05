@@ -26,7 +26,6 @@ group :development do
   gem 'gemdiff'
   gem 'annotate'
   gem 'listen', '~> 3.2'
-  gem 'strong_versions', '~> 0.4.5'
   gem 'rubocop-rails', '~> 2.8', require: false
   # => https://github.com/pawurb/ruby-pg-extras
   gem 'ruby-pg-extras', '~> 1.2'
