@@ -7,6 +7,10 @@ module Commands
         @identifiant = identifiant
         @mot_de_passe = mot_de_passe
       end
+
+      def call
+        return OpenStruct.new success?: true
+      end
     end
   end
 end
