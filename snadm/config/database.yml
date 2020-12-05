@@ -9,10 +9,21 @@ default: &default
   host: <%= ENV['DATABASE_HOST'] %>
 
 development:
-  <<: *default
+  primary:
+    <<: *default
+    migrations_path: db/primary_migrations
+  audits:
+    <<: *default
+    migrations_path: db/audits_migrations
 
 test:
-  <<: *default
+  primary:
+    <<: *default
+  audits:
+    <<: *default
 
 production:
-  <<: *default
+  primary:
+    <<: *default
+  audits:
+    <<: *default
