@@ -11,6 +11,10 @@ gem 'jwt', '~> 2.2'
 gem 'lograge', '~> 0.11.2'
 # => https://github.com/nebulab/simple_command
 gem 'simple_command'
+# => https://github.com/ankane/logstop
+gem 'logstop'
+# => https://github.com/ankane/ip_anonymizer
+gem 'ip_anonymizer'
 
 group :development, :test do
   gem 'byebug', '~> 11.1', platforms: [:mri, :mingw, :x64_mingw]

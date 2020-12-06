@@ -22,5 +22,7 @@ module Snadm
     config.load_defaults 6.1
     config.eager_load_paths << Rails.root.join('lib')
     config.api_only = true
+    config.middleware.insert_after ActionDispatch::RemoteIp,
+                                   IpAnonymizer::MaskIp
   end
 end
